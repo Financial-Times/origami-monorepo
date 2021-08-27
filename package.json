@@ -1,0 +1,31 @@
+{
+	"private": true,
+	"name": "origami",
+	"version": "1.0.0",
+	"description": "the reference implementation of the FT's design system",
+	"main": "index.js",
+	"scripts": {
+		"test": "npm exec -ws -- origami-build-tools test"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Financial-Times/origami.git"
+	},
+	"keywords": [
+		"origami",
+		"components"
+	],
+	"author": "chee <chee@snoot.club>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Financial-Times/origami/issues"
+	},
+	"homepage": "https://github.com/Financial-Times/origami#readme",
+	"volta": {
+		"node": "14.17.3",
+		"npm": "7.19.1"
+	},
+	"workspaces": [
+		"components/*"
+	]
+}

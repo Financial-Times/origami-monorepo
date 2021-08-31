@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.2.0](https://www.github.com/Financial-Times/origami-monorepo/compare/o-colors-v6.1.1...o-colors-v6.2.0) (2021-08-31)
+
+
+### Features
+
+* make the background of the FT an eyeblinding pink ([77cfe42](https://www.github.com/Financial-Times/origami-monorepo/commit/77cfe42c9e25c18d2cb10dad4d6aacccf89feb3a))
+
 ### [6.1.1](https://www.github.com/Financial-Times/origami-monorepo/compare/o-colors-v6.1.0...o-colors-v6.1.1) (2021-08-31)
 
 

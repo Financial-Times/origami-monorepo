@@ -5,7 +5,7 @@
   "components/o-brand": "4.0.3",
   "components/o-buttons": "7.0.0",
   "components/o-colors": "6.2.1",
-  "components/o-comments": "8.1.0",
+  "components/o-comments": "8.1.1",
   "components/o-cookie-message": "6.0.1",
   "components/o-date": "5.0.0",
   "components/o-editorial-layout": "2.0.0",
@@ -40,11 +40,11 @@
   "components/o-teaser-collection": "4.0.0",
   "components/o-toggle": "3.0.0",
   "components/o-tooltip": "5.0.1",
-  "components/o-topper": "5.0.0",
+  "components/o-topper": "5.1.0",
   "components/o-tracking": "4.1.2",
   "components/o-typography": "7.0.2",
   "components/o-utils": "2.0.0",
   "components/o-video": "7.0.1",
   "components/o-viewport": "5.0.0",
-  "components/o-visual-effects": "4.0.1"
+  "components/o-visual-effects": "4.0.2"
 }

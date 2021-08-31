@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+
+let lock = require("../package-lock.json")
+
+let packs = lock.packages
+
+let target = process.argv[2]
+
+if (!target.startsWith("@financial-times/")) {
+	target = `@financial-times/${target}`
+}
+
+let deps = []
+
+for (let name in packs) {
+	let pack = packs[name]
+	if (name.startsWith("components/")) {
+		if (pack.peerDependencies) {
+			if (pack.peerDependencies[target]) {
+				deps.push(name)
+			}
+		}
+	}
+}
+
+deps.forEach(n => console.log(n))

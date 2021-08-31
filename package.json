@@ -22,10 +22,13 @@
 	},
 	"homepage": "https://github.com/Financial-Times/origami#readme",
 	"volta": {
-		"node": "14.17.3",
-		"npm": "7.19.1"
+		"node": "16.8.0"
 	},
 	"workspaces": [
 		"components/*"
-	]
+	],
+	"dependencies": {
+		"node": "^16.6.1",
+		"zx": "^4.0.0"
+	}
 }

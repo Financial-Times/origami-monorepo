@@ -20,11 +20,9 @@ jobs:
           node-version: 16
           registry-url: 'https://origami-npm-registry-prototype.herokuapp.com'
         if: ${{ steps.release.outputs.releases_created }}
-      - run: node ./scripts/print-argv.js '${{toJSON(steps.release.outputs)}}'
-        if: ${{ steps.release.outputs.releases_created }}
       - run: npm ci
         if: ${{ steps.release.outputs.releases_created }}
-      - run: npm publish -ws
+      - run: node ./scripts/publish.mjs '${{toJSON(steps.release.outputs)}}'
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
         if: ${{ steps.release.outputs.releases_created }}

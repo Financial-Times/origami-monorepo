@@ -2,12 +2,17 @@
 
 Tools to tailor Origami components for distinct use cases.
 
+-  [Deprecation notice](#deprecation-notice)
 -  [Terms](#terms)
 -  [Usage](#usage)
 -  [Sass](#sass)
 -  [Migration](#migration)
 -  [Contact](#contact)
 -  [Licence](#licence)
+
+## Deprecation notice
+
+⚠️ use design tokens ⚠️
 
 ## Terms
 

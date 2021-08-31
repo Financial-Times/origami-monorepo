@@ -1,5 +1,12 @@
 # Changelog
 
+### [6.2.1](https://www.github.com/Financial-Times/origami-monorepo/compare/o-colors-v6.2.0...o-colors-v6.2.1) (2021-08-31)
+
+
+### Bug Fixes
+
+* editorial have pointed out that paper is white ([2859886](https://www.github.com/Financial-Times/origami-monorepo/commit/2859886ccc13ccc1ae68d49bc24799f7f9040ffd))
+
 ## [6.2.0](https://www.github.com/Financial-Times/origami-monorepo/compare/o-colors-v6.1.1...o-colors-v6.2.0) (2021-08-31)
 
 

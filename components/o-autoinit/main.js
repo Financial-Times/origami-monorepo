@@ -2,6 +2,7 @@ const hasFired = {};
 
 function trigger(type) {
 	if (type in hasFired) {
+		hasFired[type] = false;
 		return;
 	}
 	hasFired[type] = true;

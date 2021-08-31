@@ -9,7 +9,7 @@
 		"slack": "financialtimes/content-innovation",
 		"email": "content-innovation-team.customer-products@ft.com"
 	},
-	"supportStatus": "active",
+	"supportStatus": "dead",
 	"browserFeatures": {
 		"required": [
 			"Map",

@@ -1,0 +1,12 @@
+diff --git a/node_modules/origami-build-tools/lib/helpers/files.js b/node_modules/origami-build-tools/lib/helpers/files.js
+index 78a4291..533096e 100644
+--- a/node_modules/origami-build-tools/lib/helpers/files.js
++++ b/node_modules/origami-build-tools/lib/helpers/files.js
+@@ -170,6 +170,7 @@ function getSassTestFiles(cwd) {
+  */
+ function getSassIncludePaths (cwd, config = {sassIncludePaths: []}) {
+ 	const npmPaths = [
++		path.join('..', '..', 'node_modules'),
+ 		'node_modules',
+ 		path.join('node_modules', '@financial-times')
+ 	];

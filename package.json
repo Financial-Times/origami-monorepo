@@ -5,7 +5,8 @@
 	"description": "the reference implementation of the FT's design system",
 	"main": "index.js",
 	"scripts": {
-		"test": "npm exec -ws -- origami-build-tools test"
+		"test": "npm exec -ws -- origami-build-tools test",
+    "postinstall": "npx patch-package"
 	},
 	"repository": {
 		"type": "git",

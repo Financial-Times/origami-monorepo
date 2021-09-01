@@ -22,7 +22,8 @@
 	},
 	"homepage": "https://github.com/Financial-Times/origami#readme",
 	"volta": {
-		"node": "16.8.0"
+		"node": "16.8.0",
+		"npm": "7.21.0"
 	},
 	"workspaces": [
 		"components/*"

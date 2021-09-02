@@ -1,5 +1,12 @@
 # Changelog
 
+### [6.2.2](https://www.github.com/Financial-Times/origami-monorepo/compare/o-colors-v6.2.1...o-colors-v6.2.2) (2021-09-02)
+
+
+### Bug Fixes
+
+* revert paper from white back to fff1e5 ([4a839ed](https://www.github.com/Financial-Times/origami-monorepo/commit/4a839ed5d26ffdd4fe4fdc147e1b78c206860936))
+
 ### [6.2.1](https://www.github.com/Financial-Times/origami-monorepo/compare/o-colors-v6.2.0...o-colors-v6.2.1) (2021-08-31)
 
 

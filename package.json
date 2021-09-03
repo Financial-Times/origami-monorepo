@@ -4,7 +4,7 @@
 	"version": "1.0.0",
 	"description": "the reference implementation of the FT's design system",
 	"scripts": {
-		"test": "for component in components/*; do echo $component; npm exec -w $component -- origami-build-tools verify && npm exec -w $component -- origami-build-tools test && sleep 10 && echo; done",
+		"test": "./scripts/test",
 		"postinstall": "npx patch-package; cp hooks/* .git/hooks"
 	},
 	"repository": {

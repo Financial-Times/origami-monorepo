@@ -1,8 +1,9 @@
 #!/bin/sh
 head -1 "$1" | grep -E '^(feat|fix|perf|revert|docs|chore)!?: ' > /dev/null || {
+	cat "$1"
+	echo
 	echo "commit message is unconventional!"
 	echo "https://www.conventionalcommits.org/en/v1.0.0/"
 	echo
-	cat "$1"
 	exit 2
 }

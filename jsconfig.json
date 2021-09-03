@@ -2,5 +2,8 @@
 	"compilerOptions": {
 		"module": "esnext",
 		"target": "es2020"
-	}
+	},
+	"exclude": [
+		"node_modules"
+	]
 }

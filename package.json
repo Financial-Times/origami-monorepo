@@ -26,7 +26,8 @@
 		"npm": "7.21.0"
 	},
 	"workspaces": [
-		"components/*"
+		"components/*",
+		"libraries/*"
 	],
 	"devDependencies": {
 		"@testing-library/dom": "^8.0.0",

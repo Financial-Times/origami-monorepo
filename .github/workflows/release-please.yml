@@ -25,4 +25,6 @@ jobs:
       - run: node ./scripts/publish.mjs '${{toJSON(steps.release.outputs)}}'
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-        if: ${{ steps.release.outputs.releases_created }}
+          REPO_DATA_KEY: ${{secrets.REPO_DATA_KEY}}
+          REPO_DATA_SECRET: ${{secrets.REPO_DATA_SECRET}}
+        if: ${{ steps.release.outputs.releases_created }}}

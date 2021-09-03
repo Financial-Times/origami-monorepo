@@ -17,6 +17,7 @@
 		"npm": "^7"
 	},
 	"scripts": {
+		"lint": "echo :)",
 		"test": "mocha test"
 	},
 	"volta": {

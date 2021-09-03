@@ -25,7 +25,7 @@ for await (let workspace of workspaces.paths()) {
 		await $`npm exec -w ${workspace} -- origami-build-tools test` 
 	}
 
-	await sleep(10)
+	await sleep(60)
 }
 
 export {}

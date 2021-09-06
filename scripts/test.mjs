@@ -10,22 +10,27 @@ async function hasScript(workspace, name) {
 	return typeof (await readPackage({cwd: workspace})).scripts?.[name] == "string"
 }
 
-for await (let workspace of workspaces.paths()) {
+let normals = []
+
+for (let workspace of workspaces.paths()) {
 	process.stdout.write(`\n\n${workspace}:\n`)
 	
 	if (await hasScript(workspace, "lint")) {
-		await `npm run -w ${workspace} lint`
+		await $`npm run -w ${workspace} lint`
 	} else {
 		await $`npm exec -w ${workspace} -- origami-build-tools verify` 
 	}
 
 	if (await hasScript(workspace, "test")) {
-		await `npm run -w ${workspace} test`
+		await $`npm run -w ${workspace} test`
 	} else {
-		await $`npm exec -w ${workspace} -- origami-build-tools test` 
+		// get everything built up front
+		await $`npm exec -w ${workspace} -- origami-build-tools demo`
+		normals.push(workspace)
 	}
-
-	await sleep(60)
 }
+
+// do karma setup here
+
 
 export {}

@@ -1,5 +1,5 @@
 import {$} from "zx"
-import {globbyStream as glob} from "globby"
+import {globby as glob} from "globby"
 import {readPackage} from "read-pkg"
 
 let pkgJson = await readPackage()

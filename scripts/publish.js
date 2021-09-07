@@ -19,5 +19,3 @@ for (let key in outputs) {
         -d '{"packageName": "${pkg}", "version": "v${pkgjson.version}", "type":"npm"}' \
         https://origami-repo-data-monorepo.herokuapp.com/v1/queue`
 }
-
-export {}

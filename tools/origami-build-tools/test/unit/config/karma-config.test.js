@@ -50,6 +50,7 @@ describe('base karma config', () => {
 			const actual = actualConfig.scssPreprocessor.options.includePaths;
 			const expected = [
 				process.cwd(),
+				path.resolve(process.cwd(), '..', '..', `node_modules`),
 				path.resolve(process.cwd(), `node_modules`),
 				path.resolve(process.cwd(), 'node_modules/@financial-times')
 			];

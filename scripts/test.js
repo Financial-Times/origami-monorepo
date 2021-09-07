@@ -21,7 +21,7 @@ async function hasScript(workspace, name) {
 for (let workspace of await workspaces.paths()) {
 	process.stdout.write(`\n\n${workspace}:\n`)
 
-	if (testFilter == "default") {
+	if (testFilter == "default" || !testFilter) {
 		if (await hasScript(workspace, "lint")) {
 			await $`npm run -w ${workspace} lint`
 		} else {

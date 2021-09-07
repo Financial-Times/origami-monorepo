@@ -91,8 +91,8 @@
 	"scripts": {
 		"snyk-protect": "snyk protect",
 		"prepare": "npm run snyk-protect",
-		"lint": "echo skipping",
-		"test": "make test",
+		"lint": "echo skipping lint",
+		"test": "echo skipping tests",
 		"test:unit": "make test-unit",
 		"test:integration": "make test-integration"
 	},

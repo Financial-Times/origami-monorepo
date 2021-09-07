@@ -1,24 +1,34 @@
 #!/usr/bin/env node
 
 import {$} from "zx"
-import * as workspaces from "./workspaces.mjs"
+import * as workspaces from "./workspaces.js"
 import {readPackage} from "read-pkg"
 
-let sleep = async seconds => new Promise(wakeup => setTimeout(wakeup, seconds * 1000))
-
+/**
+ *
+ * @param {string} workspace path of the workspace
+ * @param {string} name name of the npm script to check for
+ * @returns {Promise<boolean>}
+ */
 async function hasScript(workspace, name) {
-	return typeof (await readPackage({cwd: workspace})).scripts?.[name] == "string"
+	return (
+		typeof (await readPackage({cwd: workspace})).scripts?.[name] == "string"
+	)
 }
 
 let normals = []
 
-for (let workspace of workspaces.paths()) {
+for (let workspace of await workspaces.paths()) {
 	process.stdout.write(`\n\n${workspace}:\n`)
-	
+
 	if (await hasScript(workspace, "lint")) {
 		await $`npm run -w ${workspace} lint`
 	} else {
-		await $`npm exec -w ${workspace} -- origami-build-tools verify` 
+		await $`npm exec -w ${workspace} -- origami-build-tools verify`
+	}
+
+	if (await hasScript(workspace, "build")) {
+		await $`npm run -w ${workspace} build`
 	}
 
 	if (await hasScript(workspace, "test")) {
@@ -31,6 +41,5 @@ for (let workspace of workspaces.paths()) {
 }
 
 // do karma setup here
-
 
 export {}

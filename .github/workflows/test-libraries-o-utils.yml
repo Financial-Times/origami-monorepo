@@ -16,8 +16,7 @@ jobs:
       with:
         node-version: 16.x
         cache: 'npm'
-    - run: npm install --global npm@7
     - run: npm ci
     - run: npm run build --if-present
-    - run: npm run -w libraries/o-utils lint
-    - run: npm run -w libraries/o-utils test
+    - run: npx npm run -w libraries/o-utils lint
+    - run: npx npm run -w libraries/o-utils test

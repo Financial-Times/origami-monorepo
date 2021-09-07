@@ -26,19 +26,19 @@ for (let workspace of await workspaces.paths()) {
 	}
 
 	if (await hasScript(workspace, "lint")) {
-		view.lint = `npm run -w ${workspace} lint`
+		view.lint = `npx npm run -w ${workspace} lint`
 	} else {
-		view.lint = `npm exec -w ${workspace} -- origami-build-tools verify`
+		view.lint = `npx npm exec -w ${workspace} -- origami-build-tools verify`
 	}
 
 	if (await hasScript(workspace, "build")) {
-		// view.build = `npm run -w ${workspace} build`
+		// view.build = `npx npm run -w ${workspace} build`
 	}
 
 	if (await hasScript(workspace, "test")) {
-		view.test = `npm run -w ${workspace} test`
+		view.test = `npx npm run -w ${workspace} test`
 	} else {
-		view.test = `npm exec -w ${workspace} -- origami-build-tools test`
+		view.test = `npx npm exec -w ${workspace} -- origami-build-tools test`
 	}
 
 	let file = Mustache.render(template, view)

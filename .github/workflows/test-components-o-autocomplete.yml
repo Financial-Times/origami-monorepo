@@ -1,6 +1,6 @@
 name: test components/o-autocomplete
 concurrency:
-  group: ${{ github.head_ref }}
+  group: ${{ github.head_ref }}-components/o-autocomplete
   cancel-in-progress: true
 
 on:

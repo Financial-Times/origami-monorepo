@@ -1,6 +1,6 @@
 name: test components/o-fonts
 concurrency:
-  group: ${{ github.head_ref }}
+  group: ${{ github.head_ref }}-components/o-fonts
   cancel-in-progress: true
 
 on:

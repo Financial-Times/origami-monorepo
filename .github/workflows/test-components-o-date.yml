@@ -1,6 +1,6 @@
 name: test components/o-date
 concurrency:
-  group: ${{ github.head_ref }}
+  group: ${{ github.head_ref }}-components/o-date
   cancel-in-progress: true
 
 on:

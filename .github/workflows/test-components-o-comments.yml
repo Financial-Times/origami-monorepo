@@ -1,6 +1,6 @@
 name: test components/o-comments
 concurrency:
-  group: ${{ github.head_ref }}
+  group: ${{ github.head_ref }}-components/o-comments
   cancel-in-progress: true
 
 on:

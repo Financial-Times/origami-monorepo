@@ -1,6 +1,6 @@
 name: test components/o-toggle
 concurrency:
-  group: ${{ github.head_ref }}
+  group: ${{ github.head_ref }}-components/o-toggle
   cancel-in-progress: true
 
 on:

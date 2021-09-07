@@ -1,6 +1,6 @@
 name: test components/o-normalise
 concurrency:
-  group: ${{ github.head_ref }}
+  group: ${{ github.head_ref }}-components/o-normalise
   cancel-in-progress: true
 
 on:

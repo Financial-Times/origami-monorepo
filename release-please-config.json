@@ -45,7 +45,7 @@
 		"components/o-topper": {},
 		"components/o-tracking": {},
 		"components/o-typography": {},
-		"components/o-utils": {},
+		"libraries/o-utils": {},
 		"components/o-video": {},
 		"components/o-viewport": {},
 		"components/o-visual-effects": {}

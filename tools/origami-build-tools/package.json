@@ -91,6 +91,7 @@
 	"scripts": {
 		"snyk-protect": "snyk protect",
 		"prepare": "npm run snyk-protect",
+		"lint": "make verify",
 		"test": "make test",
 		"test:unit": "make test-unit",
 		"test:integration": "make test-integration"

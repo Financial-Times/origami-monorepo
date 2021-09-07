@@ -1,4 +1,7 @@
 name: test components/o-autoinit
+concurrency:
+  group: $
+  cancel-in-progress: true
 
 on:
   push:

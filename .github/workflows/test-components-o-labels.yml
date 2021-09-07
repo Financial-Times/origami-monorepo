@@ -1,4 +1,7 @@
 name: test components/o-labels
+concurrency:
+  group: $
+  cancel-in-progress: true
 
 on:
   push:

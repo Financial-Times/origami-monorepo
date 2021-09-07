@@ -1,4 +1,7 @@
 name: test components/o-editorial-layout
+concurrency:
+  group: $
+  cancel-in-progress: true
 
 on:
   push:

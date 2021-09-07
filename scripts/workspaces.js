@@ -1,4 +1,3 @@
-import {$} from "zx"
 import {globby as glob} from "globby"
 import {readPackage} from "read-pkg"
 import toposort from "toposort"

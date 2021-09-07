@@ -1,7 +1,4 @@
-# This workflow will do a clean install of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-
-name: Test pa11y
+name: test components/o-header
 
 on:
   push:
@@ -11,7 +8,6 @@ on:
 
 jobs:
   test:
-
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -23,6 +19,5 @@ jobs:
     - run: npm install --global npm@7
     - run: npm ci
     - run: npm run build --if-present
-    - run: npm test
-      env:
-        ORIGAMI_TEST_FILTER: pa11y
+    - run: npm exec -w components/o-header -- origami-build-tools verify
+    - run: npm exec -w components/o-header -- origami-build-tools test

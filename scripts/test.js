@@ -4,6 +4,8 @@ import {$} from "zx"
 import * as workspaces from "./workspaces.js"
 import {readPackage} from "read-pkg"
 
+let testFilter = process.env.ORIGAMI_TEST_FILTER
+
 /**
  *
  * @param {string} workspace path of the workspace
@@ -16,30 +18,26 @@ async function hasScript(workspace, name) {
 	)
 }
 
-let normals = []
-
 for (let workspace of await workspaces.paths()) {
 	process.stdout.write(`\n\n${workspace}:\n`)
 
-	if (await hasScript(workspace, "lint")) {
-		await $`npm run -w ${workspace} lint`
-	} else {
-		await $`npm exec -w ${workspace} -- origami-build-tools verify`
-	}
+	if (testFilter == "default") {
+		if (await hasScript(workspace, "lint")) {
+			await $`npm run -w ${workspace} lint`
+		} else {
+			await $`npm exec -w ${workspace} -- origami-build-tools verify`
+		}
 
-	if (await hasScript(workspace, "build")) {
-		// await $`npm run -w ${workspace} build`
-	}
+		if (await hasScript(workspace, "build")) {
+			// await $`npm run -w ${workspace} build`
+		}
 
-	if (await hasScript(workspace, "test")) {
-		await $`npm run -w ${workspace} test`
+		if (await hasScript(workspace, "test")) {
+			await $`npm run -w ${workspace} test`
+		}
 	} else {
-		// get everything built up front
-		await $`npm exec -w ${workspace} -- origami-build-tools demo`
-		normals.push(workspace)
+		await $`npm exec -w ${workspace} -- origami-build-tools test --test-filter=${testFilter}`
 	}
 }
-
-// do karma setup here
 
 export {}

@@ -6,7 +6,7 @@
 	"type": "module",
 	"scripts": {
 		"test": "node ./scripts/test.js",
-		"postinstall": "cp hooks/* .git/hooks"
+		"install": "cp hooks/* .git/hooks && cd tools/origami-build-tools && npm ci"
 	},
 	"repository": {
 		"type": "git",

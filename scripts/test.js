@@ -28,7 +28,7 @@ for (let workspace of await workspaces.paths()) {
 	}
 
 	if (await hasScript(workspace, "build")) {
-		await $`npm run -w ${workspace} build`
+		// await $`npm run -w ${workspace} build`
 	}
 
 	if (await hasScript(workspace, "test")) {

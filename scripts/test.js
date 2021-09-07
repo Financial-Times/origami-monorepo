@@ -36,6 +36,7 @@ for (let workspace of await workspaces.paths()) {
 			await $`npm run -w ${workspace} test`
 		}
 	} else {
+		await $`npm exec -w ${workspace} -- origami-build-tools demo`
 		await $`npm exec -w ${workspace} -- origami-build-tools test --test-filter=${testFilter}`
 	}
 }

@@ -11,7 +11,6 @@ on:
 
 jobs:
   test:
-
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -23,6 +22,7 @@ jobs:
     - run: npm install --global npm@7
     - run: npm ci
     - run: npm run build --if-present
+    - run: cd tools/origami-build-tools && npm ci
     - run: npm test
       env:
         ORIGAMI_TEST_FILTER: default

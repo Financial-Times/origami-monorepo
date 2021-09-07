@@ -40,5 +40,3 @@ for (let workspace of await workspaces.paths()) {
 		await $`npm exec -w ${workspace} -- origami-build-tools test --test-filter=${testFilter}`
 	}
 }
-
-export {}

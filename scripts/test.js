@@ -35,7 +35,7 @@ for (let workspace of await workspaces.paths()) {
 		if (await hasScript(workspace, "test")) {
 			await $`npm run -w ${workspace} test`
 		}
-	} else {
+	} else if (!(await hasScript(workspace, "test"))) {
 		await $`npm exec -w ${workspace} -- origami-build-tools demo`
 		await $`npm exec -w ${workspace} -- origami-build-tools test --test-filter=${testFilter}`
 	}

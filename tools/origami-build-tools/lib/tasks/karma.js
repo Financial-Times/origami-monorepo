@@ -120,6 +120,9 @@ module.exports = (cfg) => {
 			});
 		},
 		skip: () => {
+			if (config.testFilter && config.testFilter !== 'karma') {
+				return 'Karma tests filtered out with --test-filter';
+			}
 			const opts = {
 				useGitIgnore: true,
 				usePackageJson: false,

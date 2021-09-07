@@ -55,6 +55,9 @@ module.exports = function(cfg) {
 		title: "running true test",
 		task: (context, task) => trueTest(config, task),
 		skip: function() {
+			if (config.testFilter && config.testFilter !== 'sass') {
+				return 'Sass tests filtered out with --test-filter';
+			}
 			return files.getSassTestFiles(config.cwd).then(sassTestFiles => {
 				if (sassTestFiles.length === 0) {
 					return `No sass test files found in ./test/scss`;

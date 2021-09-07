@@ -85,6 +85,9 @@ module.exports = function (cfg) {
 			}
 		},
 		skip: async function () {
+			if (config.testFilter && config.testFilter !== 'pa11y') {
+				return 'Pa11y tests filtered out with --test-filter';
+			}
 			const demos = await files.getComponentDemos();
 			const hasPa11yDemo = demos.some(d => d.name === 'pa11y');
 			if (!hasPa11yDemo) {

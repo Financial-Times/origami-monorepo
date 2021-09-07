@@ -120,6 +120,9 @@ module.exports = function (cfg) {
 			});
 		},
 		skip: async () => {
+			if (config.testFilter && config.testFilter !== 'sass') {
+				return 'Sass tests filtered out with --test-filter';
+			}
 			const exists = await files.fileExists(await files.getMainSassPath(config.cwd));
 			return !exists;
 		}

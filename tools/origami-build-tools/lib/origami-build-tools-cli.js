@@ -39,6 +39,7 @@ const help = `
 			-v, --version              Print out version of origami-build-tools
 			--browserstack             Run tests using Browserstack instead of Chrome Stable. Requires BROWSER_STACK_USERNAME and BROWSER_STACK_ACCESS_KEY to be set.
 			--demo-filter=<demo-name>  Build a specific demo. E.G. --demo-filter=pa11y to build only the pa11y.html demo.
+			--test-filter=<test-type>  Run a specifc test type. E.G. --test-filter=pa11y to run only the pa11y tests.
 			--debug                    Keep the test runner open to enable debugging in any browser.
 
 		Full documentation

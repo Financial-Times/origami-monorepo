@@ -17,7 +17,7 @@
 		"npm": "^7"
 	},
 	"scripts": {
-		"lint": "echo :)",
+		"lint": "eslint main.js && remark -u preset-lint-origami-component README.md",
 		"test": "mocha test"
 	},
 	"volta": {

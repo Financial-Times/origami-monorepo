@@ -89,8 +89,6 @@
 	},
 	"license": "MIT",
 	"scripts": {
-		"snyk-protect": "snyk protect",
-		"prepare": "npm run snyk-protect",
 		"lint": "echo skipping lint",
 		"test": "echo skipping tests",
 		"test:unit": "make test-unit",

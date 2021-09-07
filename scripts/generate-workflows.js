@@ -1,6 +1,4 @@
 #!/usr/bin/env node
-
-import {$} from "zx"
 import * as workspaces from "./workspaces.js"
 import {readPackage} from "read-pkg"
 import {readFile, writeFile} from "fs/promises"
@@ -46,9 +44,7 @@ for (let workspace of await workspaces.paths()) {
 	let file = Mustache.render(template, view)
 
 	await writeFile(
-		`.github/workflows/test-${workspace.replace(/\//g, "-")}.yml`,
+		`.github/workflows/test-${workspace.replaceAll("/", "-")}.yml`,
 		file
 	)
 }
-
-export {}

@@ -1,6 +1,6 @@
 name: test components/o-tooltip
 concurrency:
-  group: ${{ github.head_ref }}
+  group: ${{ github.head_ref }}-components/o-tooltip
   cancel-in-progress: true
 
 on:

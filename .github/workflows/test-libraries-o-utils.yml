@@ -1,4 +1,7 @@
 name: test libraries/o-utils
+concurrency:
+  group: $
+  cancel-in-progress: true
 
 on:
   push:

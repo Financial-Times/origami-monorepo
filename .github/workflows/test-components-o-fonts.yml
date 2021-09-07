@@ -1,4 +1,7 @@
 name: test components/o-fonts
+concurrency:
+  group: $
+  cancel-in-progress: true
 
 on:
   push:

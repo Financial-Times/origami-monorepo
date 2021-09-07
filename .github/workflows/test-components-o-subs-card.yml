@@ -1,4 +1,7 @@
 name: test components/o-subs-card
+concurrency:
+  group: $
+  cancel-in-progress: true
 
 on:
   push:

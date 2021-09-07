@@ -1,4 +1,7 @@
 name: test components/o-cookie-message
+concurrency:
+  group: $
+  cancel-in-progress: true
 
 on:
   push:

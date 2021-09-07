@@ -1,4 +1,7 @@
 name: test components/o-header-services
+concurrency:
+  group: $
+  cancel-in-progress: true
 
 on:
   push:

@@ -1,4 +1,7 @@
 name: test components/o-lazy-load
+concurrency:
+  group: $
+  cancel-in-progress: true
 
 on:
   push:

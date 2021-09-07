@@ -1,4 +1,7 @@
 name: test tools/origami-build-tools
+concurrency:
+  group: $
+  cancel-in-progress: true
 
 on:
   push:

@@ -1,4 +1,7 @@
 name: test components/o-grid
+concurrency:
+  group: $
+  cancel-in-progress: true
 
 on:
   push:

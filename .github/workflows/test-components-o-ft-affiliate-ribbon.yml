@@ -1,4 +1,7 @@
 name: test components/o-ft-affiliate-ribbon
+concurrency:
+  group: $
+  cancel-in-progress: true
 
 on:
   push:

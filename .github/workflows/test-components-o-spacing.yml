@@ -1,11 +1,9 @@
 name: test components/o-spacing
 concurrency:
-  group: $
+  group: ${{ github.head_ref }}
   cancel-in-progress: true
 
 on:
-  push:
-    branches: [ main ]
   pull_request:
     branches: [ main ]
 

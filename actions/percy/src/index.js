@@ -4,9 +4,11 @@ const io = require("@actions/io")
 const fs = require("fs")
 const {context} = require("@actions/github")
 
-const cwd = process.env.WORKSPACE || "."
+const cwd = "./" + process.env.WORKSPACE || "."
 
 const isPullRequest = context.payload.pull_request
+
+fs.readdir(".", console.log)
 
 process.chdir(cwd)
 

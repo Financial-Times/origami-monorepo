@@ -1,9 +1,6 @@
 {
 	"bootstrap-sha": "1b975669fa23f7344f7d0b2e62ae477357139312",
 	"packages": {
-		".": {
-			"release-as": ""
-		},
 		"components/o-autocomplete": {},
 		"components/o-autoinit": {},
 		"components/o-banner": {},

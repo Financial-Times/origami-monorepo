@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.0](https://www.github.com/Financial-Times/origami-monorepo/compare/o-utils-v2.3.0...o-utils-v2.4.0) (2021-09-08)
+
+
+### Features
+
+* add debottlence ([f0e5876](https://www.github.com/Financial-Times/origami-monorepo/commit/f0e5876a0a82941df76723334aabd3570efef14f))
+
 ## [2.3.0](https://www.github.com/Financial-Times/origami-monorepo/compare/o-utils-v2.2.0...o-utils-v2.3.0) (2021-09-08)
 
 

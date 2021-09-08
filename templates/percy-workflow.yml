@@ -31,10 +31,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v2
-        with:
-          cache: 'npm'
-          node-version: 16
-          registry-url: 'https://origami-npm-registry-prototype.herokuapp.com'
+      with:
+        cache: 'npm'
+        node-version: 16
+        registry-url: 'https://origami-npm-registry-prototype.herokuapp.com'
     - run: npm ci
     - uses: ./actions/percy
       with:

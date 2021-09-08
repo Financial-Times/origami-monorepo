@@ -28,4 +28,4 @@ jobs:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           REPO_DATA_KEY: ${{secrets.REPO_DATA_KEY}}
           REPO_DATA_SECRET: ${{secrets.REPO_DATA_SECRET}}
-        if: ${{ steps.release.outputs.releases_created }}}
+        if: ${{ steps.release.outputs.releases_created }}

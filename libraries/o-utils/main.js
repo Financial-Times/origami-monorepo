@@ -61,14 +61,10 @@ const debottle = (func, wait) =>
 const throunttle = (func, wait) =>
 	throunce(debottle(func, wait), wait);
 
-const debottlence = (func, wait) =>
-	debottle(throunce(func, wait), wait);
-
 export {
 	debounce,
 	throttle,
 	throunce,
 	debottle,
-	throunttle,
-	debottlence
+	throunttle
 };

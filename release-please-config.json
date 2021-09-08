@@ -1,5 +1,8 @@
 {
 	"bootstrap-sha": "1b975669fa23f7344f7d0b2e62ae477357139312",
+	"plugins": [
+		"node-workspace"
+	],
 	"packages": {
 		"components/o-autocomplete": {},
 		"components/o-autoinit": {},

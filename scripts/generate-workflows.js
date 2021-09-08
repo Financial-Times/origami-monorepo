@@ -4,7 +4,8 @@ import {readPackage} from "read-pkg"
 import {readFile, writeFile} from "fs/promises"
 import Mustache from "mustache"
 
-let template = await readFile("templates/test-workflow.yml", "utf-8")
+let testTemplate = await readFile("templates/test-workflow.yml", "utf-8")
+let percyTemplate = await readFile("templates/percy-workflow.yml", "utf-8")
 
 /**
  *
@@ -23,6 +24,7 @@ for (let workspace of await workspaces.paths()) {
 		lint: "",
 		test: "",
 		workspace,
+		percyTokenName: workspace.replace(/[/-]/g, "_").toUpperCase(),
 	}
 
 	if (await hasScript(workspace, "lint")) {
@@ -41,10 +43,17 @@ for (let workspace of await workspaces.paths()) {
 		view.test = `npx npm exec -w ${workspace} -- origami-build-tools test`
 	}
 
-	let file = Mustache.render(template, view)
+	let workspaceFilename = workspace.replaceAll("/", "-")
 
-	await writeFile(
-		`.github/workflows/test-${workspace.replaceAll("/", "-")}.yml`,
-		file
-	)
+	let testFile = Mustache.render(testTemplate, view)
+
+	await writeFile(`.github/workflows/test-${workspaceFilename}.yml`, testFile)
+
+	if (workspace.startsWith("components/")) {
+		let percyFile = Mustache.render(percyTemplate, view)
+		await writeFile(
+			`.github/workflows/percy-${workspaceFilename}.yml`,
+			percyFile
+		)
+	}
 }

@@ -58,9 +58,13 @@ const throunce = (func, wait) =>
 const debottle = (func, wait) =>
 	debounce(throttle(func, wait), wait);
 
+const throunttle = (func, wait) =>
+	throunce(debottle(func, wait), wait);
+
 export {
 	debounce,
 	throttle,
 	throunce,
-	debottle
+	debottle,
+	throunttle
 };

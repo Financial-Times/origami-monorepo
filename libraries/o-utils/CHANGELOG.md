@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.0](https://www.github.com/Financial-Times/origami-monorepo/compare/o-utils-v2.2.0...o-utils-v2.3.0) (2021-09-08)
+
+
+### Features
+
+* add thrountle ([f3c2c71](https://www.github.com/Financial-Times/origami-monorepo/commit/f3c2c71c673c278469a97a802e29299a1e839a1c))
+
 ## [2.2.0](https://www.github.com/Financial-Times/origami-monorepo/compare/o-utils-v2.1.0...o-utils-v2.2.0) (2021-09-08)
 
 

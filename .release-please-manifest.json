@@ -46,5 +46,5 @@
   "components/o-video": "7.0.1",
   "components/o-viewport": "5.0.0",
   "components/o-visual-effects": "4.0.2",
-  "libraries/o-utils": "2.2.0"
+  "libraries/o-utils": "2.3.0"
 }

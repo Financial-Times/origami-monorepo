@@ -4,7 +4,7 @@ const io = require("@actions/io")
 const fs = require("fs")
 const {context} = require("@actions/github")
 
-const cwd = process.env.WORKSPACE_DIRECTORY || "."
+const cwd = process.env.WORKSPACE || "."
 
 const isPullRequest = context.payload.pull_request
 

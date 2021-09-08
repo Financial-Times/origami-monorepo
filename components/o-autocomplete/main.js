@@ -1,7 +1,7 @@
-import oAutocomplete from "./src/js/autocomplete.js";
+import oAutocomplete from './src/js/autocomplete.js'
 const constructAll = function () {
-	oAutocomplete.init();
-	document.removeEventListener("o.DOMContentLoaded", constructAll);
-};
-document.addEventListener("o.DOMContentLoaded", constructAll);
-export default oAutocomplete;
+	oAutocomplete.init(document.body);
+	document.removeEventListener('o.DOMContentLoaded', constructAll)
+}
+document.addEventListener('o.DOMContentLoaded', constructAll)
+export default oAutocomplete

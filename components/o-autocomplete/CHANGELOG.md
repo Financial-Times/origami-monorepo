@@ -1,12 +1,5 @@
 # Changelog
 
-### [1.3.3](https://www.github.com/Financial-Times/origami-monorepo/compare/o-autocomplete-v1.3.2...o-autocomplete-v1.3.3) (2021-09-08)
-
-
-### Bug Fixes
-
-* use a parameter initializer ([45621a4](https://www.github.com/Financial-Times/origami-monorepo/commit/45621a419d7fcb6d54ecabac6014d2d52cabf10e))
-
 ### [1.3.2](https://www.github.com/Financial-Times/origami-monorepo/compare/o-autocomplete-v1.3.1...o-autocomplete-v1.3.2) (2021-08-31)
 
 

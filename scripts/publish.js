@@ -26,7 +26,7 @@ for (let key in outputs) {
 			method: "POST",
 			body: JSON.stringify({
 				packageName: pkgjson.name,
-				version: pkgjson.verion,
+				version: pkgjson.version,
 				type: "npm",
 			}),
 		}

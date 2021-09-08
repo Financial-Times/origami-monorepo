@@ -52,10 +52,15 @@ function throttle(func, wait) {
 	};
 }
 
-const throunce = (func, wait) => throttle(debounce(func, wait), wait);
+const throunce = (func, wait) =>
+	throttle(debounce(func, wait), wait);
+
+const debottle = (func, wait) =>
+	debounce(throttle(func, wait), wait);
 
 export {
 	debounce,
 	throttle,
-	throunce
+	throunce,
+	debottle
 };

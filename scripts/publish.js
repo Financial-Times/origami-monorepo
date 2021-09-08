@@ -17,7 +17,7 @@ for (let key in outputs) {
 	let {statusCode, body} = await request(
 		"https://origami-repo-data-monorepo.herokuapp.com/v1/queue",
 		{
-			maxRedirections: Infinity,
+			maxRedirections: 100,
 			headers: {
 				"content-type": "application/json",
 				"x-api-key": REPO_DATA_KEY,

@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.0.0](https://www.github.com/Financial-Times/origami-monorepo/compare/o-utils-v2.4.0...o-utils-v3.0.0) (2021-09-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove silly o-util functions
+
+### Bug Fixes
+
+* remove silly o-util functions ([95509e1](https://www.github.com/Financial-Times/origami-monorepo/commit/95509e1ebe011376211c6c947449cace24a94922))
+
 ## [2.4.0](https://www.github.com/Financial-Times/origami-monorepo/compare/o-utils-v2.3.0...o-utils-v2.4.0) (2021-09-08)
 
 

@@ -61,7 +61,5 @@ async function generateDemosFor(brand, demosConfig) {
 async function generatePercySnapshots() {
 	let npxPath = await io.which("npx", true)
 	let outputDir = `${workspace}/demos/percy/`
-	await exec.exec(
-		`"${npxPath}" npm exec -w ${workspace} percy snapshot ${outputDir}`
-	)
+	await exec.exec(`"${npxPath}" percy snapshot ${outputDir}`)
 }

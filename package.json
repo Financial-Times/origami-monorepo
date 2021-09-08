@@ -51,6 +51,7 @@
 		"stylelint-config-origami-component": "^1.0.4"
 	},
 	"dependencies": {
+		"@percy/cli": "^1.0.0-beta.67",
 		"fast-glob": "^3.2.7",
 		"globby": "^12.0.2",
 		"karma": "^6.3.4",

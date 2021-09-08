@@ -23,6 +23,7 @@ for (let workspace of await workspaces.paths()) {
 	let view = {
 		lint: "",
 		test: "",
+		build: "",
 		workspace,
 		percyTokenName: workspace.replace(/[/-]/g, "_").toUpperCase(),
 	}

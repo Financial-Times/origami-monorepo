@@ -16,6 +16,6 @@ for (let key in outputs) {
 	let pkgjson = await readPackage({cwd: `${dir}/${pkg}`})
 	await $`curl -X POST \
         -H 'Content-Type: application/json' -H 'X-Api-Key: ${REPO_DATA_KEY}' -H 'X-Api-Secret: ${REPO_DATA_SECRET}' \
-        -d '{"packageName": "${pkg}", "version": "v${pkgjson.version}", "type":"npm"}' \
+        -d '{"packageName": "${pkg}", "version": "${pkgjson.version}", "type":"npm"}' \
         https://origami-repo-data-monorepo.herokuapp.com/v1/queue`
 }

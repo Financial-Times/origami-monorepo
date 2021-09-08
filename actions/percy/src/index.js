@@ -43,7 +43,7 @@ void (async function () {
 
 async function generateDemosFor(brand, demosConfig) {
 	let npxPath = await io.which("npx", true)
-	let outputDir = `demos/percy/${brand}`
+	let outputDir = `${workspace}/demos/percy/${brand}`
 	const brandSupportedDemos = demosConfig.filter(
 		d => !Array.isArray(d.brands) || d.brands.includes(brand)
 	)
@@ -52,15 +52,15 @@ async function generateDemosFor(brand, demosConfig) {
 	await exec.exec(
 		`"${npxPath}" npm exec -w ${workspace} obt demo --brand=${brand} --demo-filter="${demoNames}"`
 	)
-	if (fs.existsSync("demos/local")) {
+	if (fs.existsSync(`${workspace}/demos/local`)) {
 		await io.mkdirP(outputDir)
-		await io.mv("demos/local", outputDir)
+		await io.mv(`${workspace}/demos/local`, outputDir)
 	}
 }
 
 async function generatePercySnapshots() {
 	let npxPath = await io.which("npx", true)
-	let outputDir = "demos/percy/"
+	let outputDir = `${workspace}/demos/percy/`
 	await exec.exec(
 		`"${npxPath}" npm exec -w ${workspace} percy snapshot ${outputDir}`
 	)

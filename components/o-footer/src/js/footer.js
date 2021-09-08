@@ -62,6 +62,8 @@ class Footer {
 			rootEl = document.body;
 		} else if (typeof rootEl === 'string') {
 			rootEl = document.querySelector(rootEl);
+		} else if (typeof rootEl === 'number') {
+			rootEl = document.all[rootEl];
 		}
 
 		const footerEl = rootEl.querySelector('[data-o-component="o-footer"]');

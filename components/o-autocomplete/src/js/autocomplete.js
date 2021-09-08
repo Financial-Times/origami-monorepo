@@ -389,10 +389,7 @@ class Autocomplete {
 	 * @param {Object} [options={}] - An options object for configuring the component
 	 * @returns {Autocomplete|Autocomplete[]} The newly constructed Autocomplete components
 	 */
-	static init (rootElement, options) {
-		if (!rootElement) {
-			rootElement = document.body;
-		}
+	static init (rootElement = document.body, options) {
 		if (!(rootElement instanceof HTMLElement)) {
 			rootElement = document.querySelector(rootElement);
 		}

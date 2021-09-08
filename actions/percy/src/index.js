@@ -4,13 +4,9 @@ const io = require("@actions/io")
 const fs = require("fs")
 const {context} = require("@actions/github")
 
-const cwd = "./" + process.env.WORKSPACE || "."
+const workspace = "./" + process.env.WORKSPACE
 
 const isPullRequest = context.payload.pull_request
-
-fs.readdir(".", console.log)
-
-process.chdir(cwd)
 
 void (async function () {
 	try {
@@ -25,8 +21,9 @@ void (async function () {
 			}
 
 			const componentConfig = JSON.parse(
-				fs.readFileSync("./origami.json", "utf-8")
+				fs.readFileSync(`${workspace}/origami.json`, "utf-8")
 			)
+
 			const demosConfig = componentConfig.demos || []
 
 			if (componentConfig.brands) {
@@ -51,10 +48,9 @@ async function generateDemosFor(brand, demosConfig) {
 		d => !Array.isArray(d.brands) || d.brands.includes(brand)
 	)
 	const demoNames = brandSupportedDemos.map(d => d.name).join(",")
+
 	await exec.exec(
-		`"${npxPath}" obt demo --brand=${brand} --demo-filter="${demoNames}"`,
-		[],
-		{cwd}
+		`"${npxPath}" npm exec -w ${workspace} obt demo --brand=${brand} --demo-filter="${demoNames}"`
 	)
 	if (fs.existsSync("demos/local")) {
 		await io.mkdirP(outputDir)
@@ -65,7 +61,7 @@ async function generateDemosFor(brand, demosConfig) {
 async function generatePercySnapshots() {
 	let npxPath = await io.which("npx", true)
 	let outputDir = "demos/percy/"
-	await exec.exec(`"${npxPath}" percy snapshot ${outputDir}`, [], {
-		cwd,
-	})
+	await exec.exec(
+		`"${npxPath}" npm exec -w ${workspace} percy snapshot ${outputDir}`
+	)
 }

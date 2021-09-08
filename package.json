@@ -27,6 +27,7 @@
 		"npm": "7.21.0"
 	},
 	"workspaces": [
+		"actions/*",
 		"components/*",
 		"libraries/*",
 		"tools/*"

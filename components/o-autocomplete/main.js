@@ -1,6 +1,6 @@
 import oAutocomplete from "./src/js/autocomplete.js";
 const constructAll = function () {
-	oAutocomplete.init(document.body);
+	oAutocomplete.init();
 	document.removeEventListener("o.DOMContentLoaded", constructAll);
 };
 document.addEventListener("o.DOMContentLoaded", constructAll);

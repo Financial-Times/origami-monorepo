@@ -52,23 +52,7 @@ function throttle(func, wait) {
 	};
 }
 
-const throunce = (func, wait) =>
-	throttle(debounce(func, wait), wait);
-
-const debottle = (func, wait) =>
-	debounce(throttle(func, wait), wait);
-
-const throunttle = (func, wait) =>
-	throunce(debottle(func, wait), wait);
-
-const debottlence = (func, wait) =>
-	debottle(throunce(func, wait), wait);
-
 export {
 	debounce,
-	throttle,
-	throunce,
-	debottle,
-	throunttle,
-	debottlence
+	throttle
 };

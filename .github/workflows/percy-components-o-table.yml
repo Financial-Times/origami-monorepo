@@ -35,6 +35,7 @@ jobs:
         node-version: 16
         registry-url: 'https://origami-npm-registry-prototype.herokuapp.com'
     - run: npm ci
+    - run: ls
     - uses: ./actions/percy/
       with:
         # To comment as the Origami Fox mascot GitHub user

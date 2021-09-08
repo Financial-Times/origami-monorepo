@@ -41,4 +41,4 @@ jobs:
         github-token: ${{secrets.ORIGAMI_FOX_ACCESS_TOKEN}}
       env:
         PERCY_TOKEN: ${{ secrets.PERCY_TOKEN_COMPONENTS_O_TOPPER }}
-        WORKSPACE: components&#x2F;o-topper
+        WORKSPACE: components/o-topper

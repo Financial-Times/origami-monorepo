@@ -3,9 +3,24 @@ import * as workspaces from "./workspaces.js"
 import {readPackage} from "read-pkg"
 import {readFile, writeFile} from "fs/promises"
 import Mustache from "mustache"
+import {basename} from "path"
 
 let testTemplate = await readFile("templates/test-workflow.yml", "utf-8")
 let percyTemplate = await readFile("templates/percy-workflow.yml", "utf-8")
+let labelerTemplate = await readFile("templates/labeler.yml", "utf-8")
+
+let workspacePaths = await workspaces.paths()
+
+let labelerFile = Mustache.render(labelerTemplate, {
+	workspaces: workspacePaths.map(path => {
+		return {
+			name: basename(path),
+			path,
+		}
+	}),
+})
+
+await writeFile(`.github/labeler.yml`, labelerFile)
 
 /**
  *
@@ -19,7 +34,7 @@ async function hasScript(workspace, name) {
 	)
 }
 
-for (let workspace of await workspaces.paths()) {
+for (let workspace of workspacePaths) {
 	let view = {
 		lint: "",
 		test: "",

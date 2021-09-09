@@ -9,10 +9,10 @@
 		}
 
 		tbody tr:nth-child(even) {
-			background-color: _oTableGet('table-background');
+			background-color: hotpink;
 			th {
 				// For sticky "responsive-scroll" headers.
-				background-color: _oTableGet('table-background');
+				background-color: hotpink;
 			}
 		}
 	}

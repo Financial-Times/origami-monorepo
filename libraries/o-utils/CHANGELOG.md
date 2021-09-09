@@ -1,5 +1,12 @@
 # Changelog
 
+### [3.1.1](https://www.github.com/Financial-Times/origami-monorepo/compare/o-utils-v3.1.0...o-utils-v3.1.1) (2021-09-09)
+
+
+### Bug Fixes
+
+* remove deprecated function ([f3979ee](https://www.github.com/Financial-Times/origami-monorepo/commit/f3979eee4f393ff5b4b4d824ebe65cfae24a0fd2))
+
 ## [3.1.0](https://www.github.com/Financial-Times/origami-monorepo/compare/o-utils-v3.0.0...o-utils-v3.1.0) (2021-09-08)
 
 

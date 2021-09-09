@@ -34,7 +34,7 @@
   "components/o-stepped-progress": "3.0.0",
   "components/o-subs-card": "5.0.1",
   "components/o-syntax-highlight": "4.0.0",
-  "components/o-table": "9.1.1",
+  "components/o-table": "9.2.0",
   "components/o-tabs": "6.0.0",
   "components/o-teaser": "6.0.2",
   "components/o-teaser-collection": "4.0.0",
@@ -46,5 +46,5 @@
   "components/o-video": "7.0.1",
   "components/o-viewport": "5.0.1",
   "components/o-visual-effects": "4.0.2",
-  "libraries/o-utils": "3.1.0"
+  "libraries/o-utils": "3.1.1"
 }

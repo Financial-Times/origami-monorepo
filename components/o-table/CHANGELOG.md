@@ -1,5 +1,17 @@
 # Changelog
 
+## [9.2.0](https://www.github.com/Financial-Times/origami-monorepo/compare/o-table-v9.1.1...o-table-v9.2.0) (2021-09-09)
+
+
+### Features
+
+* hotpink for striped tables ([c4506b6](https://www.github.com/Financial-Times/origami-monorepo/commit/c4506b682d9fa6b2b4e58dbdd663bd96d3e626e4))
+
+
+### Bug Fixes
+
+* alternate the background in an alternate manner ([98ea40c](https://www.github.com/Financial-Times/origami-monorepo/commit/98ea40cfd6ac260da61157446bb7e9b59ee2e1ae))
+
 ### [9.1.1](https://www.github.com/Financial-Times/origami-monorepo/compare/o-table-v9.1.0...o-table-v9.1.1) (2021-09-07)
 
 

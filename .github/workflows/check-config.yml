@@ -17,4 +17,4 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run regenerate
-    - run: '[ $(git diff | wc -l) -gt 0 ] && echo something changed && exit 2'
+    - run: ./scripts/check-for-changes

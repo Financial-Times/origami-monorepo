@@ -1,0 +1,5 @@
+#!/bin/bash
+if [ $(git diff | wc -l) -gt 0 ]; then
+	echo something changed
+	exit 22
+fi

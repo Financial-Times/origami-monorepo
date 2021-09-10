@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - o-utils@2
+      - backport/o-utils@2
 name: release-please
 jobs:
   release-please:
@@ -13,6 +13,7 @@ jobs:
           token: ${{ secrets.ORIGAMI_GITHUB_TOKEN }}
           command: manifest
           monorepo-tags: true
+          default-branch: backport/o-utils@2
       - uses: actions/checkout@v2
         if: ${{ steps.release.outputs.releases_created }}
       - uses: actions/setup-node@v2

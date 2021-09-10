@@ -7,7 +7,13 @@ let workspaces = Array.isArray(pkgJson.workspaces)
 	? pkgJson.workspaces
 	: pkgJson.workspaces.packages
 
-export const paths = () => glob(workspaces, {onlyDirectories: true})
+/**
+ *
+ * @returns {Promise<string[]>}
+ */
+export const paths = async () => {
+	return glob(workspaces, {onlyDirectories: true})
+}
 
 /**
  *
@@ -44,4 +50,26 @@ export async function sort(workspaces) {
 	return toposort.array(Array.from(names), edges).map(n => {
 		return namePathMap[n]
 	})
+}
+
+/**
+ *
+ * @param {string} workspace the workspace path
+ * @returns {Promise<string[]>}
+ */
+export async function dependants(workspace, recurse = false) {
+	let target = await readPackage({cwd: workspace})
+	let workspaces = []
+
+	for (let path of await paths()) {
+		let pkg = await readPackage({cwd: path})
+		if (Object.keys(pkg.peerDependencies || {}).includes(target.name)) {
+			workspaces.push(path)
+			if (recurse) {
+				workspaces.push(...(await dependants(path)))
+			}
+		}
+	}
+
+	return workspaces
 }

@@ -2,9 +2,7 @@
 	"bootstrap-sha": "1b975669fa23f7344f7d0b2e62ae477357139312",
 	"packages": {
 		"components/o-autocomplete": {},
-		"libraries/o-autoinit": {},
 		"components/o-banner": {},
-		"libraries/o-brand": {},
 		"components/o-buttons": {},
 		"components/o-colors": {},
 		"components/o-comments": {},
@@ -12,7 +10,6 @@
 		"components/o-date": {},
 		"components/o-editorial-layout": {},
 		"components/o-editorial-typography": {},
-		"libraries/o-errors": {},
 		"components/o-expander": {},
 		"components/o-fonts": {},
 		"components/o-footer": {},
@@ -45,9 +42,12 @@
 		"components/o-topper": {},
 		"components/o-tracking": {},
 		"components/o-typography": {},
-		"libraries/o-utils": {},
 		"components/o-video": {},
 		"components/o-viewport": {},
-		"components/o-visual-effects": {}
+		"components/o-visual-effects": {},
+		"libraries/o-autoinit": {},
+		"libraries/o-brand": {},
+		"libraries/o-errors": {},
+		"libraries/o-utils": {}
 	}
 }

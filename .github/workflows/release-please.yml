@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - main
+      - o-utils@2
 name: release-please
 jobs:
   release-please:

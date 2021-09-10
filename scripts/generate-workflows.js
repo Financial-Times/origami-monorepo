@@ -4,6 +4,7 @@ import {readPackage} from "read-pkg"
 import {readFile, writeFile} from "fs/promises"
 import Mustache from "mustache"
 import {basename} from "path"
+import del from "del"
 
 let testTemplate = await readFile("templates/test-workflow.yml", "utf-8")
 let percyTemplate = await readFile("templates/percy-workflow.yml", "utf-8")
@@ -33,6 +34,8 @@ async function hasScript(workspace, name) {
 		typeof (await readPackage({cwd: workspace})).scripts?.[name] == "string"
 	)
 }
+
+await del([".github/workflows/percy-*.yml", ".github/workflows/test-*.yml"])
 
 for (let workspace of workspacePaths) {
 	let view = {

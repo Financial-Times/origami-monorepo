@@ -1,6 +1,6 @@
-name: test components/o-autoinit
+name: test libraries/o-brand
 concurrency:
-  group: ${{ github.head_ref }}-components/o-autoinit
+  group: ${{ github.head_ref }}-libraries/o-brand
   cancel-in-progress: true
 
 on:
@@ -18,5 +18,5 @@ jobs:
         node-version: 16.x
         cache: 'npm'
     - run: npm ci
-    - run: npx npm exec -w components/o-autoinit -- origami-build-tools verify
-    - run: npx npm exec -w components/o-autoinit -- origami-build-tools test
+    - run: npx npm exec -w libraries/o-brand -- origami-build-tools verify
+    - run: npx npm exec -w libraries/o-brand -- origami-build-tools test

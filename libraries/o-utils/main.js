@@ -64,11 +64,15 @@ const throunttle = (func, wait) =>
 const debottlence = (func, wait) =>
 	debottle(throunce(func, wait), wait);
 
+const noop = Function.prototype;
+
+
 export {
 	debounce,
 	throttle,
 	throunce,
 	debottle,
 	throunttle,
-	debottlence
+	debottlence,
+	noop
 };

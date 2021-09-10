@@ -23,12 +23,8 @@ percy:
   - actions/percy/**/*
 o-autocomplete:
   - components/o-autocomplete/**/*
-o-autoinit:
-  - components/o-autoinit/**/*
 o-banner:
   - components/o-banner/**/*
-o-brand:
-  - components/o-brand/**/*
 o-buttons:
   - components/o-buttons/**/*
 o-colors:
@@ -43,8 +39,6 @@ o-editorial-layout:
   - components/o-editorial-layout/**/*
 o-editorial-typography:
   - components/o-editorial-typography/**/*
-o-errors:
-  - components/o-errors/**/*
 o-expander:
   - components/o-expander/**/*
 o-fonts:
@@ -115,6 +109,12 @@ o-viewport:
   - components/o-viewport/**/*
 o-visual-effects:
   - components/o-visual-effects/**/*
+o-autoinit:
+  - libraries/o-autoinit/**/*
+o-brand:
+  - libraries/o-brand/**/*
+o-errors:
+  - libraries/o-errors/**/*
 o-utils:
   - libraries/o-utils/**/*
 origami-build-tools:
